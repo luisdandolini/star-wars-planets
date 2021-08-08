@@ -11,3 +11,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.film {
+  background-color: aqua;
+  padding: 50px 100px;
+  margin: 50px 0;
+}
