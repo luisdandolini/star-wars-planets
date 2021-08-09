@@ -62,7 +62,7 @@ function App() {
     return (
       <div>
         {films.map(film => (
-          <div key={film.episode_id} className="list-item">
+          <div key={film.episode_id} className="list-item flex">
             <Film film={film} />
             {selectedFilm === film ? <Planets /> : <></>}
           </div>
@@ -73,7 +73,7 @@ function App() {
 
   function Film(props) {
     return (
-      <div onClick={() => handleFilmClick(props.film)} className="film">
+      <div onClick={() => handleFilmClick(props.film)} className="film flex">
         <h1>{props.film.title}</h1>
         <h2>{props.film.director}</h2>
         <h3>{props.film.release_date}</h3>
@@ -89,7 +89,7 @@ function App() {
             <Planet planet={planet} />
           </div>
         ))}
-        <button onClick={() => handleClearClick()}>CLEAR</button>
+        <button onClick={() => handleClearClick()} className="button">CLEAR</button>
       </div>
     )
   }
